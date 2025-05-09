@@ -54,12 +54,10 @@ Repository link: [click here](https://github.com/AndresCMartinez/DataEngineer-In
 - `poetry env activate` -- It will give you the path to the virtual environment, sth like below
 - `source ../Library/Caches/pypoetry/virtualenvs/interview-libraries-mxcwlasx-py3.11/bin/activate` -- It will activate the virtual environment
 ### 4. Install the dependencies
-- `poetry install` -- It will install the dependencies in the virtual environment
-### 5. Run the code
-- `python main.py` -- It will run the code
-### 6. Run the linter
+- `poetry install --no-root` -- It will install the dependencies in the virtual environment
+### 5. Run the linter
 - `ruff format --line-length 80` . -- It will run the linter and format the code
 - `ruff check --fix` . -- It will solve any issues found by the linter
-### 7. Run the code
+### 6. Run the code
 - `python main.py` -- It will run the code and save the outputs in the `data` folder
 
