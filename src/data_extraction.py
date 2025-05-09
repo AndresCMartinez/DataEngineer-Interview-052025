@@ -12,6 +12,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger("DataExtractionLogger")
 
+
 @dataclass
 class DataExtraction:
     def get_films_data(self) -> pd.DataFrame:
@@ -68,5 +69,7 @@ class DataExtraction:
         # Save the final DataFrame to a CSV file
         films_details.to_csv("data/raw_films_data.csv", index=False)
 
-        logger.info("Data Extraction completed successfully. Data saved to data/raw_films_data.csv\n")
+        logger.info(
+            "Data Extraction completed successfully. Data saved to data/raw_films_data.csv\n"
+        )
         return films_details

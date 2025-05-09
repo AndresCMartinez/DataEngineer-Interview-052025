@@ -12,6 +12,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger("DataCleaningLogger")
 
+
 @dataclass
 class DataCleaning:
     def clean_budget(self, x):
@@ -72,6 +73,6 @@ class DataCleaning:
         films_data.to_csv("data/stage_films_data.csv", index=False)
 
         logger.info(
-            f"Data cleaning completed successfully. Cleaned data saved to data/stage_films_data.csv\n"
+            "Data cleaning completed successfully. Cleaned data saved to data/stage_films_data.csv\n"
         )
         return films_data
