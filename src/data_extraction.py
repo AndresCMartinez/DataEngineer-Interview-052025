@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 import pandas as pd
 import logging
+import os
 from .rest_calls import RestSyncCalls, RestAsyncCalls
 
 from .constants import Constants
@@ -67,6 +68,7 @@ class DataExtraction:
         films_details = films_details[Constants.FILM_FINAL_COLS]
 
         # Save the final DataFrame to a CSV file
+        os.makedirs("data", exist_ok=True)
         films_details.to_csv("data/raw_films_data.csv", index=False)
 
         logger.info(
