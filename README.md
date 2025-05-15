@@ -20,6 +20,7 @@ Repository link: [click here](https://github.com/AndresCMartinez/DataEngineer-In
 │   ├── data_cleaning.py
 ├── main.py
 ├── data_validation.ipynb
+├── requirements.txt
 ├── pyproject.toml
 ├── poetry.lock
 ├── README.md
@@ -45,7 +46,8 @@ Repository link: [click here](https://github.com/AndresCMartinez/DataEngineer-In
       - £ -> Pounds -> 1.32 Dollars
 10. The implemention includes a logging system to track the progress of the pipeline
 
-## Instructions to run the code
+---
+## Instructions to run the code (Using - Poetry)
 ### 1. Clone the repository
 - `git clone https://github.com/AndresCMartinez/DataEngineer-Interview-052025.git`
 ### 2. Navigate to the directory
@@ -59,5 +61,29 @@ Repository link: [click here](https://github.com/AndresCMartinez/DataEngineer-In
 - `ruff format --line-length 80` . -- It will run the linter and format the code
 - `ruff check --fix` . -- It will solve any issues found by the linter
 ### 6. Run the code
+- `python main.py` -- It will run the code and save the outputs in the `data` folder
+
+---
+
+## Instructions to run the code (Using - venv)
+
+### 1. Clone the repository
+- `git clone https://github.com/AndresCMartinez/DataEngineer-Interview-052025.git`
+
+### 2. Navigate to the directory
+- `cd DataEngineer-Interview-052025`
+
+### 3. Create and activate the virtual environment
+- `python -m venv .venv` -- It will create a virtual environment in the `.venv` directory
+- `source .venv/bin/activate` -- It will activate the virtual environment
+
+### 4. Install the dependencies
+- `pip install -r requirements.txt` -- It will install the main dependencies
+
+### 5. Run the linter (Optional - It is just to show the code is well formated)
+- `ruff format --line-length 80` -- It will run the linter and format the code
+- `ruff check --fix` -- It will solve any issues found by the linter
+
+### 6. Run the code (Run the ETL)
 - `python main.py` -- It will run the code and save the outputs in the `data` folder
 
